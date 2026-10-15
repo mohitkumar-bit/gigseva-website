@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subscription & Ads Management - GIG SEVA</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/professional-tool.css">
+<link rel="stylesheet" href="css/main.css">
+     
+
+    
+</head>
+
+
+<body>
+
+    
+
+    <div id="header"></div>
+
+
+
+    <main>
+
+        <div class="website-wrapper">
+
+            <div class="web-header">
+
+                <h1>Subscription & Ad Packages</h1>
+
+                <p>
+                    Select the right plan for your business or purchase
+                    extra ad slots whenever you need them.
+                </p>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <h2>Choose Your Subscription</h2>
+
+                <span>One plan at a time</span>
+
+            </div>
+
+
+            <div class="plans-grid">
+
+                <label class="subscription-card">
+
+                    <input
+                        type="radio"
+                        name="subscription"
+                        value="starter"
+                        class="plan-radio"
+                    >
+
+                    <div class="plan-badge">
+                        Starter
+                    </div>
+
+                    <div class="plan-name">
+                        Starter Plan
+                    </div>
+
+                    <div class="plan-price">
+                        <strong>Free</strong>
+                    </div>
+
+                    <div class="card-divider"></div>
+
+                    <ul class="plan-features">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            1 post per month
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            3 chat slots only
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Basic search placement
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Standard support
+                        </li>
+
+                    </ul>
+
+                    <div class="selected-label">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Selected
+                    </div>
+
+                </label>
+
+
+                <!-- PRO PLAN -->
+
+                <label class="subscription-card">
+
+                    <input
+                        type="radio"
+                        name="subscription"
+                        value="pro"
+                        class="plan-radio"
+                    >
+
+                    <div class="plan-badge">
+                        Most Popular
+                    </div>
+
+                    <div class="plan-name">
+                        Pro Plan
+                    </div>
+
+                    <div class="plan-price">
+                        <strong>₹199</strong>
+                        <span>/ month</span>
+                    </div>
+
+                    <div class="card-divider"></div>
+
+                    <ul class="plan-features">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Unlimited chat messaging
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            1 post per month included
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            1 featured post included
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Priority placement
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Priority support
+
+                    </ul>
+
+                    <div class="selected-label">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Selected
+                    </div>
+
+                </label>
+
+
+                <!-- BUSINESS PLAN -->
+
+                <label class="subscription-card">
+
+                    <input
+                        type="radio"
+                        name="subscription"
+                        value="business"
+                        class="plan-radio"
+                    >
+
+                    <div class="plan-badge">
+                        Business
+                    </div>
+
+                    <div class="plan-name">
+                        Business Plan
+                    </div>
+
+                    <div class="plan-price">
+                        <strong>₹999</strong>
+                        <span>/ 6 months</span>
+                    </div>
+
+                    <div class="card-divider"></div>
+
+                    <ul class="plan-features">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified business account badge
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Unlimited chat messaging
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            1 post per month for 6 months
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            1 featured post included
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Top search placement
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Priority support
+                        </li>
+
+                    </ul>
+
+                    <div class="selected-label">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Selected
+                    </div>
+
+                </label>
+
+            </div>
+
+             <!-- SUBSCRIPTION PAYMENT -->
+
+            <div class="subscription-action">
+
+                <button
+                    type="button"
+                    class="subscription-pay-btn disabled"
+                    id="subscriptionPayBtn"
+                    disabled
+                >
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    Select a Plan
+
+                </button>
+
+            </div>
+
+
+           <!-- EXTRA ADS -->
+
+<section class="extra-ads-section">
+
+    <!-- Extra Ads Header -->
+    <div class="extra-ads-header">
+
+        <div class="extra-ads-title">
+
+            <div class="extra-ads-icon">
+                <i class="fa-solid fa-rectangle-ad"></i>
+            </div>
+
+            <div>
+                <h2>Extra Ad Slots</h2>
+
+                <p>
+                    Need more ads? Add listings beyond your plan limit.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+   
+
+    <div class="extra-ad-card">
+
+        <div class="extra-ad-info">
+
+            <div class="extra-ad-number">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div class="extra-ad-text">
+
+                <strong>
+                    Extra Ad Slot
+                </strong>
+
+                <span>
+                    Add one additional listing
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Action -->
+        <div class="extra-ad-action">
+
+            <div class="extra-ad-price">
+
+                ₹99
+
+                <span>
+                    / ad
+                </span>
+
+            </div>
+
+
+            <!-- Quantity -->
+            <div class="extra-ad-quantity">
+
+                <button
+                    type="button"
+                    class="quantity-btn"
+                    aria-label="Decrease quantity"
+                >
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+
+
+                <span class="quantity-value">
+                    1
+                </span>
+
+
+                <button
+                    type="button"
+                    class="quantity-btn"
+                    aria-label="Increase quantity"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Pay Button -->
+            <button
+                type="button"
+                class="extra-pay-btn"
+            >
+
+                <i class="fa-solid fa-star"></i>
+
+                Pay Now
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+        </div>
+
+    </main>
+
+
+
+    <div id="footer"></div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const planCards =
+                document.querySelectorAll(".subscription-card");
+
+            const radioButtons =
+                document.querySelectorAll(".plan-radio");
+
+            const payButton =
+                document.getElementById("subscriptionPayBtn");
+
+
+            /* =====================================================
+               PLAN SELECTION
+            ===================================================== */
+
+            radioButtons.forEach(function (radio) {
+
+                radio.addEventListener("change", function () {
+
+                    /* Remove selected class */
+                    planCards.forEach(function (card) {
+                        card.classList.remove("selected");
+                    });
+
+
+                    /* Add selected class */
+                    const selectedCard =
+                        this.closest(".subscription-card");
+
+                    selectedCard.classList.add("selected");
+
+
+                    /* Enable payment button */
+                    payButton.disabled = false;
+
+                    payButton.classList.remove("disabled");
+
+                    payButton.innerHTML = `
+                        <i class="fa-solid fa-credit-card"></i>
+                        Continue with ${this.value.charAt(0).toUpperCase() + this.value.slice(1)}
+                    `;
+
+                });
+
+            });
+
+
+            /* =====================================================
+               SUBSCRIPTION PAYMENT
+            ===================================================== */
+
+            payButton.addEventListener("click", function () {
+
+                const selectedPlan =
+                    document.querySelector(
+                        'input[name="subscription"]:checked'
+                    );
+
+
+                if (!selectedPlan) {
+                    return;
+                }
+
+
+                console.log(
+                    "Selected Subscription:",
+                    selectedPlan.value
+                );
+
+
+            
+
+
+                alert(
+                    "You selected the " +
+                    selectedPlan.value +
+                    " plan."
+                );
+
+            });
+
+
+            /* =====================================================
+               EXTRA AD PAYMENT BUTTONS
+            ===================================================== */
+
+            const extraPayButtons =
+                document.querySelectorAll(".extra-pay-btn");
+
+
+            extraPayButtons.forEach(function (button, index) {
+
+                button.addEventListener("click", function () {
+
+                    const adNumber = index + 1;
+
+
+                    console.log(
+                        "Extra Ad Selected:",
+                        adNumber
+                    );
+
+
+                    
+
+
+                    alert(
+                        "Extra Ad " +
+                        adNumber +
+                        " selected. Amount: ₹99"
+                    );
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+    <!-- Main JS -->
+    <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

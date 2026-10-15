@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - GIG SEVA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="login-page">
+        <div class="login-container">
+
+            <div class="login-brand">
+                <div class="brand-overlay">
+                    <div class="brand-logo">
+                        <img src="images/logo.jpeg" alt="Gig Seva Logo">
+                    </div>
+                    <div class="brand-content">
+                        <div class="brand-tag">GIG SEVA SECURITY</div>
+                        <h1>Verify Your<br><span>Mobile Number</span></h1>
+                        <p>Enter the 6-digit verification code. For now use the dummy OTP shown on this screen.</p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="login-section">
+                <div class="login-card">
+
+                    <div class="mobile-logo">
+                        <img src="images/logo.jpeg" alt="Gig Seva Logo">
+                    </div>
+
+                    <div class="login-header">
+                        <h2>Enter Verification Code</h2>
+                        <p>Code sent to <span id="otpPhoneLabel">+91 ———</span> <a href="#" id="otpEditLink" class="edit-number">Edit</a></p>
+                        <p id="otpHint" class="auth-hint" style="margin-top:8px;font-size:13px;color:#64748b;"></p>
+                    </div>
+
+                    <p id="authError" class="auth-error" hidden></p>
+
+                    <form id="otpForm" class="login-form" novalidate>
+                        <div class="otp-container">
+                            <input type="text" maxlength="1" class="otp-input" inputmode="numeric" autocomplete="one-time-code" autofocus>
+                            <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+                            <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+                            <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+                            <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+                            <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+                        </div>
+
+                        <div class="resend-text">
+                            Didn't receive code? <a href="#" id="otpResend">Resend OTP</a>
+                        </div>
+
+                        <button type="submit" id="otpSubmit" class="login-btn">
+                            <span>Verify &amp; Proceed</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <div class="back-link">
+                        <a href="login.html"><i class="fa-solid fa-arrow-left"></i> Back to Login</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/otp.js"></script>
+</body>
+</html>

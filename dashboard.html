@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIG Seva - My Account</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="account-page">
+
+        <section class="account-header">
+
+            <div class="account-header-content">
+
+                <h1>
+                    My Account
+                </h1>
+
+                <p>
+                    Home / My Account
+                </p>
+
+            </div>
+
+        </section>
+
+
+      
+
+        <div class="account-container">
+
+
+            
+
+            <aside class="account-sidebar">
+
+
+                <!-- PROFILE -->
+                <div class="profile-card">
+
+                    <div class="profile-image-wrap">
+                        <div class="profile-image">
+                            <img
+                                id="dashAvatar"
+                                src="images/logo.jpeg"
+                                alt="Customer Profile"
+                            >
+                        </div>
+                        <button
+                            type="button"
+                            class="profile-photo-btn"
+                            id="dashAvatarBtn"
+                            title="Profile photo options"
+                            aria-label="Profile photo options"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <div class="profile-photo-menu" id="dashPhotoMenu" hidden>
+                            <button type="button" class="profile-photo-menu-item" id="dashViewPhotoBtn">
+                                <i class="fa-solid fa-eye"></i>
+                                View photo
+                            </button>
+                            <button type="button" class="profile-photo-menu-item" id="dashUpdatePhotoBtn">
+                                <i class="fa-solid fa-camera"></i>
+                                Update
+                            </button>
+                            <button type="button" class="profile-photo-menu-item is-danger" id="dashRemovePhotoBtn" hidden>
+                                <i class="fa-solid fa-trash"></i>
+                                Remove
+                            </button>
+                        </div>
+                        <input
+                            type="file"
+                            id="dashAvatarInput"
+                            accept="image/jpeg,image/png,image/webp,image/jpg"
+                            hidden
+                        >
+                    </div>
+
+                    <div class="profile-name-row">
+                        <h2 id="dashSidebarName">
+                            —
+                        </h2>
+                        <span class="user-verified-badge" data-verified-badge hidden>
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            Verified
+                        </span>
+                    </div>
+
+                    <p id="dashSidebarEmail">
+                        —
+                    </p>
+
+                    <p id="dashAvatarStatus" class="profile-photo-status" hidden></p>
+
+                </div>
+
+
+                <!-- MENU -->
+
+                <nav class="account-menu">
+
+                    <a
+                        href="#dashboard"
+                        class="account-menu-item active"
+                    >
+                        <span class="menu-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#subscription"
+                        class="account-menu-item"
+                    >
+                        <span class="menu-icon">
+                            <i class="fa-solid fa-crown"></i>
+                        </span>
+
+                        <span>
+                            My Subscription
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#profile"
+                        class="account-menu-item"
+                    >
+                        <span class="menu-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+
+                        <span>
+                            My Profile
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="account-menu-item logout"
+                        id="dashLogout"
+                        data-logout
+                    >
+                        <span class="menu-icon">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </span>
+
+                        <span>
+                            Logout
+                        </span>
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+           <!--   RIGHT CONTENT -->
+
+            <main class="account-content">
+
+
+                <!--  DASHBOARD -->
+
+                <section
+                    id="dashboard"
+                    class="dashboard-section"
+                >
+
+                    <!-- WELCOME CARD -->
+
+                    <div class="welcome-card">
+
+                        <div class="welcome-content">
+
+                            <div class="welcome-title-row">
+                                <h2 id="dashWelcomeTitle">
+                                    Welcome Back
+                                </h2>
+                                <span class="user-verified-badge user-verified-badge--light" data-verified-badge hidden>
+                                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                    Verified
+                                </span>
+                            </div>
+
+                            <p>
+                                Manage your GIG Seva subscription and extra boosters from one place.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCOUNT OVERVIEW -->
+
+                    <div class="content-card">
+
+                        <div class="content-card-header">
+
+                            <div>
+                                <h2>
+                                    Account Overview
+                                </h2>
+
+                                <p>
+                                    Your current GIG Seva account information
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="overview-grid">
+
+
+                            <!-- CURRENT PLAN -->
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon">
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <span>
+                                        Current Plan
+                                    </span>
+
+                                    <strong id="dashOverviewPlan">
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- EXTRA POSTS -->
+
+                            <div class="overview-item overview-item--hidden">
+
+                                <div class="overview-icon">
+                                    <i class="fa-solid fa-file-circle-plus"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <span>
+                                        Extra Posts
+                                    </span>
+
+                                    <strong id="dashOverviewExtraPosts">
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- EXTRA BOOSTS -->
+
+                            <div class="overview-item overview-item--hidden">
+
+                                <div class="overview-icon">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <span>
+                                        Extra Boosts
+                                    </span>
+
+                                    <strong id="dashOverviewExtraBoosts">
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- STATUS -->
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <span>
+                                        Account Status
+                                    </span>
+
+                                    <strong id="dashOverviewStatus">
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- EXPIRY -->
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <span>
+                                        Plan Valid Till
+                                    </span>
+
+                                    <strong id="dashOverviewValidTill">
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quota-panel">
+
+                            <div class="quota-panel-header">
+                                <h3 class="quota-panel-title">This month's usage</h3>
+                                <p class="quota-panel-subtitle">Plan slots reset monthly. Purchased extra posts and boosts add to your remaining count and roll over if unused.</p>
+                            </div>
+
+                            <div class="quota-section">
+                                <p class="quota-section-label">Included with your plan</p>
+                                <div class="quota-panel-grid">
+
+                                    <div class="quota-card quota-card--plan">
+                                        <div class="quota-card-head">
+                                            <span class="quota-card-icon" aria-hidden="true">
+                                                <i class="fa-solid fa-file-lines"></i>
+                                            </span>
+                                            <span class="quota-panel-label">Plan posts</span>
+                                        </div>
+                                        <div class="quota-card-metric">
+                                            <strong id="dashQuotaSubPosts">—</strong>
+                                            <span class="quota-card-unit">remaining</span>
+                                        </div>
+                                        <div class="quota-progress" aria-hidden="true">
+                                            <div class="quota-progress-fill" id="dashQuotaPostsProgress"></div>
+                                        </div>
+                                        <small id="dashQuotaSubPostsUsed">—</small>
+                                    </div>
+
+                                    <div class="quota-card quota-card--plan">
+                                        <div class="quota-card-head">
+                                            <span class="quota-card-icon" aria-hidden="true">
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="quota-panel-label">Plan boosts</span>
+                                        </div>
+                                        <div class="quota-card-metric">
+                                            <strong id="dashQuotaSubBoosts">—</strong>
+                                            <span class="quota-card-unit">remaining</span>
+                                        </div>
+                                        <div class="quota-progress" aria-hidden="true">
+                                            <div class="quota-progress-fill" id="dashQuotaBoostsProgress"></div>
+                                        </div>
+                                        <small id="dashQuotaSubBoostsUsed">—</small>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="quota-section">
+                                <p class="quota-section-label">Promotions</p>
+                                <div class="quota-promo-grid">
+                                    <div class="quota-card quota-card--video">
+                                        <div class="quota-card-head">
+                                            <span class="quota-card-icon quota-card-icon--video" aria-hidden="true">
+                                                <i class="fa-solid fa-video"></i>
+                                            </span>
+                                            <span class="quota-panel-label">Video posts</span>
+                                        </div>
+                                        <div class="quota-card-metric">
+                                            <strong id="dashQuotaVideoPosts">—</strong>
+                                            <span class="quota-card-unit">available</span>
+                                        </div>
+                                        <small>30 sec video · valid 30 days</small>
+                                        <button type="button" class="quota-promo-upload quota-promo-upload--video" id="dashUploadVideoBtn">
+                                            <i class="fa-solid fa-upload" aria-hidden="true"></i>
+                                            Upload video
+                                        </button>
+                                    </div>
+
+                                    <div class="quota-card quota-card--banner">
+                                        <div class="quota-card-head">
+                                            <span class="quota-card-icon quota-card-icon--banner" aria-hidden="true">
+                                                <i class="fa-solid fa-image"></i>
+                                            </span>
+                                            <span class="quota-panel-label">Banner ads</span>
+                                        </div>
+                                        <div class="quota-card-metric">
+                                            <strong id="dashQuotaBannerAds">—</strong>
+                                            <span class="quota-card-unit">available</span>
+                                        </div>
+                                        <small>Poster banner · valid 30 days</small>
+                                        <button type="button" class="quota-promo-upload quota-promo-upload--banner" id="dashUploadBannerBtn">
+                                            <i class="fa-solid fa-upload" aria-hidden="true"></i>
+                                            Upload banner
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- MY SUBSCRIPTION -->
+
+                <section
+                    id="subscription"
+                    class="dashboard-section"
+                >
+
+                    <!-- Current plan (Free by default when no paid subscription) -->
+                    <div class="content-card" id="subscriptionCurrent">
+
+                        <div class="content-card-header">
+
+                            <div>
+
+                                <h2>
+                                    My Subscription
+                                </h2>
+
+                                <p>
+                                    Details of your current subscription
+                                </p>
+
+                            </div>
+
+                            <span class="active-badge" id="dashSubBadge">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <button type="button" class="subscription-box" id="dashPlanVerifyBtn">
+
+                            <div class="subscription-plan">
+
+                                <div class="plan-icon">
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Current Plan
+                                    </span>
+
+                                    <h3 id="dashSubPlanName">
+                                        Free Plan
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+                            <div class="subscription-side">
+
+                                <div class="subscription-price">
+
+                                    <strong id="dashSubPrice">
+                                        ₹0
+                                    </strong>
+
+                                    <span id="dashSubPriceLabel">
+                                        / forever
+                                    </span>
+
+                                </div>
+
+                                <span class="subscription-verify-hint is-cta" id="dashPlanVerifyHint" hidden>
+                                    Get verified
+                                </span>
+
+                            </div>
+
+                        </button>
+
+                        <div class="details-grid">
+
+                            <div class="detail-box">
+                                <span>Purchase Date</span>
+                                <strong id="dashSubStart">—</strong>
+                            </div>
+
+                            <div class="detail-box">
+                                <span>Validity</span>
+                                <strong id="dashSubValidity">—</strong>
+                            </div>
+
+                            <div class="detail-box">
+                                <span>Expiry Date</span>
+                                <strong id="dashSubEnd">—</strong>
+                            </div>
+
+                            <div class="detail-box">
+                                <span>Payment Status</span>
+                                <strong class="paid-text" id="dashSubPayment">—</strong>
+                            </div>
+
+                            <div class="detail-box">
+                                <span>Payment Method</span>
+                                <strong>Online Payment</strong>
+                            </div>
+
+                            <div class="detail-box">
+                                <span>Subscription ID</span>
+                                <strong id="dashSubId">—</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- No plan → shop -->
+                    <div class="plans-shop" id="subscriptionShop" hidden>
+
+                        <div class="plans-shop-hero">
+                            <div class="plans-shop-hero-copy">
+                                <h2>
+                                    More Visibility. More Connections.
+                                    <span>More Opportunities.</span>
+                                </h2>
+                                <p>
+                                    Unlock unlimited chats, boost your ads, and reach the right people faster with our powerful plans and boosters.
+                                </p>
+                                <div class="plans-shop-highlights">
+                                    <div><i class="fa-solid fa-comments"></i><span><strong>Unlimited Chats</strong><small>Connect without limits</small></span></div>
+                                    <div><i class="fa-solid fa-bullhorn"></i><span><strong>Powerful Boosts</strong><small>Get more visibility instantly</small></span></div>
+                                    <div><i class="fa-solid fa-bullseye"></i><span><strong>More Engagement</strong><small>Reach the right audience</small></span></div>
+                                    <div><i class="fa-solid fa-chart-line"></i><span><strong>Grow Faster</strong><small>Maximize your opportunities</small></span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plans-shop-heading">
+                            Our <span>Subscription & Boosters</span>
+                        </div>
+                        <p class="plans-shop-note">
+                            Extra Ad, Extra Boost, and Video Promotion can be purchased on any plan, including Free.
+                        </p>
+
+                        <div class="plans-shop-grid">
+
+                            <article class="plans-shop-card theme-slate" data-plan-card="free">
+                                <span class="plans-shop-num">01</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-user"></i></div>
+                                <h3>Free Plan</h3>
+                                <ul>
+                                    <li>Only 3 chats</li>
+                                    <li>1 post per month</li>
+                                    <li>Basic profile listing</li>
+                                    <li>Browse jobs &amp; services</li>
+                                </ul>
+                                <div class="plans-shop-price">₹0 <small>/ forever</small></div>
+                                <button type="button" class="plans-shop-buy" data-buy-plan="free" disabled>Current Plan</button>
+                            </article>
+
+                            <article class="plans-shop-card theme-orange" data-plan-card="pro">
+                                <span class="plans-shop-num">02</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-comments"></i></div>
+                                <h3>Pro Plan</h3>
+                                <ul>
+                                    <li>Unlimited chat messaging</li>
+                                    <li>1 post per month included</li>
+                                    <li>1 featured post included</li>
+                                    <li>Priority placement</li>
+                                </ul>
+                                <div class="plans-shop-price">₹199 <small>/ month</small></div>
+                                <button type="button" class="plans-shop-buy" data-buy-plan="pro">Buy Now</button>
+                            </article>
+
+                            <article class="plans-shop-card theme-green" data-plan-card="business">
+                                <span class="plans-shop-num">03</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-comments"></i></div>
+                                <h3>Business Plan</h3>
+                                <ul>
+                                    <li>Verified business badge</li>
+                                    <li>Unlimited chat messaging</li>
+                                    <li>1 post per month for 6 months</li>
+                                    <li>1 featured post included</li>
+                                </ul>
+                                <div class="plans-shop-price">₹999 <small>/ 6 months</small></div>
+                                <button type="button" class="plans-shop-buy" data-buy-plan="business">Buy Now</button>
+                            </article>
+
+                            <article class="plans-shop-card theme-purple">
+                                <span class="plans-shop-num">04</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-plus"></i></div>
+                                <h3>Extra Ad</h3>
+                                <ul>
+                                    <li>Get 1 extra advertisement slot</li>
+                                </ul>
+                                <div class="plans-shop-price">₹99</div>
+                                <button type="button" class="plans-shop-buy" data-buy-credit="credit_extra_post">Buy Now</button>
+                            </article>
+
+                            <article class="plans-shop-card theme-blue">
+                                <span class="plans-shop-num">05</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-rocket"></i></div>
+                                <h3>Extra Boost</h3>
+                                <ul>
+                                    <li>Get 1 extra boost for your advertisement</li>
+                                </ul>
+                                <div class="plans-shop-price">₹99</div>
+                                <button type="button" class="plans-shop-buy" data-buy-credit="credit_extra_feature">Buy Now</button>
+                            </article>
+
+                            <article class="plans-shop-card theme-pink">
+                                <span class="plans-shop-num">06</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-video"></i></div>
+                                <h3>Video Promotion</h3>
+                                <ul>
+                                    <li>Upload your 30 second video</li>
+                                    <li>Promote all around</li>
+                                    <li>Valid for 30 days</li>
+                                </ul>
+                                <div class="plans-shop-price">₹1999</div>
+                                <button type="button" class="plans-shop-buy" data-buy-credit="credit_video_post">Buy Now</button>
+                            </article>
+
+                            <article class="plans-shop-card theme-amber">
+                                <span class="plans-shop-num">07</span>
+                                <div class="plans-shop-icon"><i class="fa-solid fa-image"></i></div>
+                                <h3>Banner Promotion</h3>
+                                <ul>
+                                    <li>Feature boosted poster picture ad</li>
+                                    <li>Shown in the home feed</li>
+                                    <li>Valid for 30 days</li>
+                                </ul>
+                                <div class="plans-shop-price">₹999</div>
+                                <button type="button" class="plans-shop-buy" data-buy-credit="credit_banner_ad">Buy Now</button>
+                            </article>
+
+                        </div>
+
+                        <div class="plans-shop-trust">
+                            <div><i class="fa-solid fa-shield-halved"></i><span><strong>Trusted & Secure</strong><small>Your privacy is our priority</small></span></div>
+                            <div><i class="fa-solid fa-users"></i><span><strong>Wide Reach</strong><small>Connect with the right audience</small></span></div>
+                            <div><i class="fa-solid fa-clock"></i><span><strong>Quick & Easy</strong><small>Boost in just a few clicks</small></span></div>
+                            <div><i class="fa-solid fa-headset"></i><span><strong>24/7 Support</strong><small>We're here to help you grow</small></span></div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     MY PROFILE
+                ================================================== -->
+
+                <section
+                    id="profile"
+                    class="dashboard-section"
+                >
+
+                    <div class="content-card">
+
+                        <div class="content-card-header">
+
+                            <div>
+
+                                <h2>
+                                    My Profile
+                                </h2>
+
+                                <p>
+                                    Your account information
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-details">
+
+
+                            <div class="profile-detail-box">
+
+                                <span>
+                                    Full Name
+                                </span>
+
+                                <strong class="profile-name-with-badge">
+                                    <span id="dashProfileName">—</span>
+                                    <span class="user-verified-badge user-verified-badge--compact" data-verified-badge hidden>
+                                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                        Verified
+                                    </span>
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail-box">
+
+                                <span>
+                                    Email
+                                </span>
+
+                                <strong id="dashProfileEmail">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail-box">
+
+                                <span>
+                                    Phone
+                                </span>
+
+                                <strong id="dashProfilePhone">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail-box">
+
+                                <span>
+                                    Location
+                                </span>
+
+                                <strong id="dashProfileLocation">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-detail-box">
+
+                                <span>
+                                    Member Since
+                                </span>
+
+                                <strong id="dashProfileMemberSince">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <div class="photo-lightbox" id="dashPhotoLightbox" hidden>
+        <button type="button" class="photo-lightbox-close" id="dashPhotoLightboxClose" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="dashPhotoLightboxImg" src="" alt="Profile photo">
+    </div>
+
+    <div class="verify-modal" id="dashVerifyModal" hidden>
+        <button type="button" class="verify-modal-backdrop" id="dashVerifyModalBackdrop" aria-label="Close verification"></button>
+        <div class="verify-modal-sheet" role="dialog" aria-modal="true" aria-labelledby="dashVerifyModalTitle">
+            <button type="button" class="verify-modal-close" id="dashVerifyModalClose" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="business-verify-card" id="businessVerification">
+                <div class="business-verify-header">
+                    <div class="business-verify-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="business-verify-copy">
+                        <h3 id="dashVerifyModalTitle">Business verification</h3>
+                        <p id="dashVerifyMessage">Verify your Aadhaar with OTP to get a verified badge on your profile.</p>
+                    </div>
+                    <span class="verify-status-badge is-verified" id="dashVerifyBadge" hidden>Verified</span>
+                </div>
+
+                <div class="verify-state" id="dashVerifyVerified" hidden>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>Your account is verified. The verified badge is active on your profile.</p>
+                </div>
+
+                <div class="verify-state is-pending" id="dashVerifyPending" hidden>
+                    <i class="fa-solid fa-clock"></i>
+                    <p>Aadhaar verified. Waiting for admin approval — up to 24 hours.</p>
+                </div>
+
+                <div class="verify-upgrade" id="dashVerifyUpgrade" hidden>
+                    <div class="verify-upgrade-plan">
+                        <div class="verify-upgrade-plan-icon" aria-hidden="true">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <div>
+                            <span>Business plan</span>
+                            <strong>₹999 <small>/ 6 months</small></strong>
+                        </div>
+                    </div>
+                    <p>A verified badge is included once you buy the Business plan.</p>
+                    <button type="button" class="verify-submit-btn" id="dashVerifyUpgradeBtn">
+                        <span>See Business plan</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="verify-state is-rejected" id="dashVerifyRejected" hidden>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <p id="dashVerifyRejectReason">Verification was rejected. Please submit again.</p>
+                </div>
+
+                <form id="dashVerifyForm" class="verify-form" hidden>
+                    <div class="verify-step" id="verifyStepAadhaar">
+                        <label class="verify-field-label" for="verifyAadhaarNumber">Aadhaar number</label>
+                        <input
+                            type="text"
+                            id="verifyAadhaarNumber"
+                            class="verify-input"
+                            inputmode="numeric"
+                            maxlength="12"
+                            placeholder="Enter 12-digit Aadhaar number"
+                            autocomplete="off"
+                        >
+                        <button type="button" class="verify-secondary-btn" id="verifySendOtpBtn">
+                            <span>Send OTP</span>
+                        </button>
+                    </div>
+
+                    <div class="verify-step" id="verifyStepOtp" hidden>
+                        <p class="verify-otp-hint" id="verifyOtpHint">OTP sent to your Aadhaar-linked mobile number.</p>
+                        <label class="verify-field-label" for="verifyOtp">Enter OTP</label>
+                        <input
+                            type="text"
+                            id="verifyOtp"
+                            class="verify-input"
+                            inputmode="numeric"
+                            maxlength="6"
+                            placeholder="6-digit OTP"
+                            autocomplete="one-time-code"
+                        >
+                        <div class="verify-form-actions">
+                            <button type="button" class="verify-link-btn" id="verifyChangeAadhaar">Change Aadhaar number</button>
+                            <button type="submit" class="verify-submit-btn" id="dashVerifySubmit">
+                                <span>Verify &amp; submit for approval</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p id="dashVerifyError" class="auth-error" hidden></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="promo-modal" id="dashVideoUploadModal" hidden>
+        <button type="button" class="promo-modal-backdrop" data-promo-modal-close aria-label="Close"></button>
+        <div class="promo-modal-sheet" role="dialog" aria-modal="true" aria-labelledby="dashVideoUploadTitle">
+            <button type="button" class="promo-modal-close" data-promo-modal-close aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="promo-modal-header promo-modal-header--video">
+                <div class="promo-modal-icon"><i class="fa-solid fa-video"></i></div>
+                <div>
+                    <h3 id="dashVideoUploadTitle">Upload video ad</h3>
+                    <p>30 second video · max 25 MB · shown in the app feed · valid 30 days</p>
+                </div>
+            </div>
+            <form id="dashVideoUploadForm" class="promo-upload-form">
+                <label class="promo-upload-field">
+                    <span>Video (max 30 sec, 25 MB)</span>
+                    <input type="file" id="dashVideoFile" accept="video/mp4,video/quicktime,video/*" required>
+                </label>
+                <div class="promo-upload-preview" id="dashVideoPreview" hidden>
+                    <video id="dashVideoPreviewPlayer" controls playsinline></video>
+                </div>
+                <label class="promo-upload-field">
+                    <span>Title <small>(max 20, no numbers)</small></span>
+                    <input type="text" id="dashVideoTitle" maxlength="20" required placeholder="e.g. Best offer">
+                </label>
+                <label class="promo-upload-field">
+                    <span>Description <small>(max 29, no numbers)</small></span>
+                    <input type="text" id="dashVideoDescription" maxlength="29" required placeholder="Short description">
+                </label>
+                <label class="promo-upload-field">
+                    <span>Category</span>
+                    <select id="dashVideoCategory" required></select>
+                </label>
+                <label class="promo-upload-field">
+                    <span>Location / city</span>
+                    <input type="text" id="dashVideoLocation" required placeholder="City or area">
+                </label>
+                <p class="promo-upload-error" id="dashVideoUploadError" hidden></p>
+                <button type="submit" class="promo-upload-submit promo-upload-submit--video" id="dashVideoUploadSubmit">
+                    Publish video ad
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="promo-modal" id="dashBannerUploadModal" hidden>
+        <button type="button" class="promo-modal-backdrop" data-promo-modal-close aria-label="Close"></button>
+        <div class="promo-modal-sheet" role="dialog" aria-modal="true" aria-labelledby="dashBannerUploadTitle">
+            <button type="button" class="promo-modal-close" data-promo-modal-close aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="promo-modal-header promo-modal-header--banner">
+                <div class="promo-modal-icon"><i class="fa-solid fa-image"></i></div>
+                <div>
+                    <h3 id="dashBannerUploadTitle">Upload banner ad</h3>
+                    <p>Poster image · shown in the app feed · valid 30 days</p>
+                </div>
+            </div>
+            <form id="dashBannerUploadForm" class="promo-upload-form">
+                <label class="promo-upload-field">
+                    <span>Banner image</span>
+                    <input type="file" id="dashBannerFile" accept="image/jpeg,image/png,image/webp,image/*" required>
+                </label>
+                <div class="promo-upload-preview promo-upload-preview--image" id="dashBannerPreview" hidden>
+                    <img id="dashBannerPreviewImg" alt="Banner preview">
+                </div>
+                <label class="promo-upload-field">
+                    <span>Title <small>(max 20, no numbers)</small></span>
+                    <input type="text" id="dashBannerTitle" maxlength="20" required placeholder="e.g. Best offer">
+                </label>
+                <label class="promo-upload-field">
+                    <span>Description <small>(max 29, no numbers)</small></span>
+                    <input type="text" id="dashBannerDescription" maxlength="29" required placeholder="Short description">
+                </label>
+                <label class="promo-upload-field">
+                    <span>Category</span>
+                    <select id="dashBannerCategory" required></select>
+                </label>
+                <label class="promo-upload-field">
+                    <span>Location / city</span>
+                    <input type="text" id="dashBannerLocation" required placeholder="City or area">
+                </label>
+                <p class="promo-upload-error" id="dashBannerUploadError" hidden></p>
+                <button type="submit" class="promo-upload-submit promo-upload-submit--banner" id="dashBannerUploadSubmit">
+                    Publish banner ad
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+<script src="js/auth.js"></script>
+<script src="js/promo-upload.js"></script>
+<script src="js/customer-dashboard.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

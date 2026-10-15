@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | GIG Seva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <main class="login-page">
+        <div class="login-container">
+            <section class="login-brand">
+                <div class="brand-image">
+                    <img src="images/gig-seva-hero.webp" alt="GIG Seva Opportunities">
+                </div>
+                <div class="brand-overlay">
+                    <div class="brand-logo">
+                        <img src="images/logo.jpeg" alt="GIG Seva">
+                    </div>
+                    <div class="brand-content">
+                        <span class="brand-tag">GIG Seva</span>
+                        <h1>Unbox the Box of <span>Opportunities.</span></h1>
+                        <p>
+                            Connect with skilled workers, contractors,
+                            and service providers. Find opportunities,
+                            build connections, and grow with GIG Seva.
+                        </p>
+                    </div>
+                    <div class="brand-points">
+                        <div class="brand-point">
+                            <span><i class="fa-solid fa-briefcase"></i></span>
+                            <div>
+                                <strong>Find Work</strong>
+                                <small>Discover opportunities that match your skills.</small>
+                            </div>
+                        </div>
+                        <div class="brand-point">
+                            <span><i class="fa-solid fa-users"></i></span>
+                            <div>
+                                <strong>Connect Directly</strong>
+                                <small>Connect with contractors and clients.</small>
+                            </div>
+                        </div>
+                        <div class="brand-point">
+                            <span><i class="fa-solid fa-chart-line"></i></span>
+                            <div>
+                                <strong>Grow Your Career</strong>
+                                <small>Turn your skills into better opportunities.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="login-section">
+                <div class="login-card">
+                    <a href="index.html" class="mobile-logo">
+                        <img src="images/logo.jpeg" alt="GIG Seva">
+                    </a>
+
+                    <div class="login-header">
+                        <div class="login-icon">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </div>
+                        <h2>Welcome back!</h2>
+                        <p>Sign in with your phone number</p>
+                    </div>
+
+                    <p id="authError" class="auth-error" hidden></p>
+
+                    <form id="loginForm" class="login-form" novalidate>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="mobile-input">
+                                <div class="country-code">
+                                    <span>🇮🇳</span>
+                                    <strong>+91</strong>
+                                </div>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="9876543210"
+                                    maxlength="10"
+                                    minlength="10"
+                                    pattern="[0-9]{10}"
+                                    inputmode="numeric"
+                                    autocomplete="tel"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="terms">
+                            <label>
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span>
+                                    I agree to the
+                                    <a href="termsandcondition.html">Terms & Conditions</a>
+                                    and
+                                    <a href="privacy_policy.html">Privacy Policy</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" id="loginSubmit" class="login-btn" disabled>
+                            <span>Send OTP</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <div class="login-security">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Your information is secure with us</span>
+                    </div>
+
+                    <div class="register-link">
+                        <span>Don't have an account?</span>
+                        <a href="registration-form.html">Sign Up</a>
+                    </div>
+
+                    <a href="index.html" class="back-home">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to GIG Seva
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
