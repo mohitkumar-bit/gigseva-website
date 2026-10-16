@@ -1359,7 +1359,7 @@ ABOUT SECTION — CLEAR START AFTER HERO
 }
 .contact {
   position: relative;
-  padding: 112px 0;
+  padding: 112px 0 32px;
   background: #FFFFFF;
   text-align: center;
   overflow: hidden;
@@ -1504,7 +1504,7 @@ ABOUT SECTION — CLEAR START AFTER HERO
 
 @media (max-width: 992px) {
   .contact {
-    padding: 76px 0;
+    padding: 76px 0 24px;
   }
   .contact .contact-grid {
     grid-template-columns: 1fr;
@@ -1516,7 +1516,7 @@ ABOUT SECTION — CLEAR START AFTER HERO
 }
 @media (max-width: 576px) {
   .contact {
-    padding: 56px 0;
+    padding: 56px 0 20px;
   }
   .contact .contact-subtitle {
     margin-bottom: 32px;
