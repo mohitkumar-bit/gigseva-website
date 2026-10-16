@@ -413,19 +413,11 @@ function renderAuthNav() {
   const desktop = document.getElementById('navAuthDesktop');
   const mobile = document.getElementById('navAuthMobile');
 
-  const downloadBtn = `
-    <a href="#" class="btn btn-primary">
-      <i class="fa-solid fa-download"></i>
-      Download APK
-    </a>
-  `;
-
   const loggedOutHtml = `
     <a href="login.html" class="btn btn-outline">
       <i class="fa-solid fa-user"></i>
       Login
     </a>
-    ${downloadBtn}
   `;
 
   if (!user) {
@@ -468,14 +460,11 @@ function renderAuthNav() {
   `;
 
   if (desktop) {
-    desktop.innerHTML = `${downloadBtn}${profileMenu}`;
+    desktop.innerHTML = profileMenu;
   }
 
   if (mobile) {
-    mobile.innerHTML = `
-      ${downloadBtn}
-      ${profileMenu}
-    `;
+    mobile.innerHTML = profileMenu;
   }
 
   bindProfileMenus();
