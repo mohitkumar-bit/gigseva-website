@@ -409,13 +409,6 @@ function escapeHtml(str) {
 }
 
 function renderAuthNav() {
-  // TEMP DISABLED: no Login button or account menu in the header. Delete this block to restore.
-  document.querySelectorAll('#navAuthDesktop, #navAuthMobile').forEach((el) => {
-    el.innerHTML = '';
-  });
-  return;
-  // eslint-disable-next-line no-unreachable
-
   const user = AuthStore.getUser();
   const desktop = document.getElementById('navAuthDesktop');
   const mobile = document.getElementById('navAuthMobile');
