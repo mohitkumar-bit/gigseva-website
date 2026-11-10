@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- TEMP DISABLED: account dashboard sends visitors to the home page. Remove this line to restore it. -->
+    <script>window.location.replace('index.html');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIG Seva - My Account</title>
@@ -23,6 +25,8 @@
 <body>
     <div id="header"></div>
 
+    <!-- TEMP DISABLED: account dashboard (dashboard, subscription, profile). Remove the <template> wrapper and restore the scripts below to bring it back. -->
+    <template id="dashboardDisabled">
     <div class="account-page">
 
         <section class="account-header">
@@ -1001,10 +1005,14 @@
         </div>
     </div>
 
+    </template>
+
     <div id="footer"></div>
+<!-- TEMP DISABLED
 <script src="js/auth.js"></script>
 <script src="js/promo-upload.js"></script>
 <script src="js/customer-dashboard.js"></script>
 <script src="js/main.js"></script>
+-->
 </body>
 </html>
